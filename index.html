@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Magic Mirror</title>
+
+	<link rel="stylesheet" href="static/css/weather-icons.min.css">
+	<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+	<div class="top left">
+		<span id="timer-hour"></span>:<span id="timer-min"></span><span id="timer-suffix"></span>
+	</div>
+	<div class="top right">
+		<div>
+			<span id="current-temp"></span>ºF <span id="current-weather-icon"></span>
+		</div>
+		<div>
+			<span id="prob-rain"></span>% <span class="wi wi-raindrops"></span>
+		</div>
+	</div>
+	<div class="lower-third center-hor">Lower third center hor</div>
+	<div class="bottom center-hor">Bottom third center hor</div>
+	
+	<script src="static/node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="static/js/config.js"></script>
+	<script src="static/js/icon-map.js"></script>
+	<script src="static/js/app.js"></script>
+</body>
+</html>

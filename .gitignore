@@ -1,0 +1,6 @@
+mirror
+static/font
+static/node_modules
+static/js/config.js
+static/css/weather-icons.min.css
+*.pyc
