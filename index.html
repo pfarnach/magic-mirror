@@ -8,24 +8,36 @@
 	<link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-
-	<div class="top left">
-		<span id="timer-hour"></span>:<span id="timer-min"></span><span id="timer-suffix"></span>
-	</div>
-	<div class="top right">
-		<div>
-			<span id="current-temp"></span>ºF <span id="current-weather-icon"></span>
+	<div class="container">
+		<div class="top left">
+			<div class="full-time">
+				<span class="timer-hour"></span><span class="time-colon">:</span><span class="timer-min"></span><span class="timer-suffix"></span>
+			</div>
+			<div class="full-date"></div>
 		</div>
-		<div>
-			<span id="prob-rain"></span>% <span class="wi wi-raindrops"></span>
+		<div class="top right">
+			<div class="current-temp-container">
+				<span class="current-temp"></span>ºF <span class="current-weather-icon"></span>
+			</div>
+			<div class="prob-rain-container">
+				<span class="prob-rain"></span>% <span class="wi wi-umbrella"></span>
+			</div>
+			<hr class="weather-separator">
+			<div class="weekly-forecast-container"></div>
+		</div>
+		<div class="lower-third center-hor">
+			<div class="quote-content"></div>
+			<div class="quote-author"></div>
+		</div>
+		<div class="bottom center-hor tickercontainer">
+			<ul class="newsticker"></ul>
 		</div>
 	</div>
-	<div class="lower-third center-hor">Lower third center hor</div>
-	<div class="bottom center-hor">Bottom third center hor</div>
 	
 	<script src="static/node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="static/js/config.js"></script>
 	<script src="static/js/icon-map.js"></script>
+	<script src="static/js/jquery.newsTicker.min.js"></script>
 	<script src="static/js/app.js"></script>
 </body>
 </html>

@@ -56,6 +56,7 @@ table {
 --- STYLING ---
 --------------- */
 
+/*-- Positioning --*/
 .top {
 	position: absolute;
 	top: 50px;
@@ -81,7 +82,7 @@ table {
 
 .lower-third {
 	position: absolute;
-	top: 66.666%;
+	top: 86%;
 	height: 200px;
 	margin-top: -100px;
 	line-height: 100px;	
@@ -99,7 +100,75 @@ table {
 	bottom: 50px;
 }
 
+/*-- Fonts --*/
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/static/font/Quicksand-Regular.otf');
+}
 
+/*-- General --*/
+html, body {
+	background-color: black;
+	color: white;
+	font-family: 'Quicksand';
+}
+
+/*-- Time --*/
+.timer-hour, .timer-min {
+	font-size: 2.4em;
+}
+
+.time-colon {
+	font-size: 2em;
+	margin-right: 5px;
+}
+
+.timer-suffix {
+	text-transform: uppercase;
+}
+
+.full-date {
+	letter-spacing: .2em
+}
+
+/*-- Weather --*/
+.current-temp-container {
+	font-size: 1.8em;
+	margin-bottom: 5px;
+}
+
+.weather-separator {
+	width: 50%;
+	text-align: right;
+	margin-right: 0;
+}
+
+.weekly-forecast-container {
+	font-size: 0.8em;
+}
+
+.day-label {
+	opacity: 0.8;
+}
+
+/*-- Quote --*/
+.quote-content {
+	line-height: 150%;
+}
+.quote-author {
+	margin-top: -20px;
+	font-style: italic;
+}
+
+/*-- Ticker --*/
+.newsticker {
+	font-size: .8em;
+}
+
+.tickercontainer {
+	width: 80%;
+	float: left;
+}
 
 
 
