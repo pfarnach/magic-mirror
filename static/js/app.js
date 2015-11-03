@@ -136,7 +136,7 @@
 		// NEWS TICKER
 		function getNews() {
 			$.get("/get_news_headlines", function (data) {
-				var headlines = data.headlines;
+				var headlines = data.headlines.slice(0, 10); // just get the first 10 because they get crappy after that
 				$('.marquee').hide();
 				
 				headlines.forEach(function(headline) {

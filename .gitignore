@@ -5,3 +5,4 @@ static/js/config.js
 static/css/weather-icons.min.css
 *.pyc
 static/js/jquery.newsTicker.min.js
+.*

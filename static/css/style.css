@@ -114,69 +114,73 @@ html, body {
 }
 
 hr {
-	opacity: 0.5;
+	opacity: 0.3;
 }
 
 /*-- Time --*/
 .timer-hour, .timer-min {
-	font-size: 3.0em;
+	font-size: 5.5em;
 }
 
 .time-colon {
-	font-size: 2em;
+	font-size: 4.4em;
 	margin-right: 5px;
 }
 
 .timer-suffix {
+	font-size: 2.5em;
 	text-transform: uppercase;
 }
 
 .full-date {
-	letter-spacing: .2em
+	font-size: 2em;
+	letter-spacing: .2em;
 }
 
 /*-- Weather --*/
 .weather-container .wi {
-	margin: 2px 4px;
+	margin: 6px 4px;
 }
 
 .current-temp-container {
-	font-size: 1.8em;
-	margin-bottom: 5px;
+	font-size: 3.2em;
+	margin-bottom: 10px;
 }
 
 .prob-rain-container {
-	font-size: 1.3em;
+	font-size: 2em;
 }
 
 .weather-separator {
-	width: 60%;
+	width: 70%;
 	text-align: right;
 	margin-right: 0;
 }
 
 .hourly-change-container {
-	font-size: 0.8em;
+	font-size: 1.4em;
 }
 
 .hourly-change-label {
-	opacity: 0.8;
+	opacity: 0.5;
 }
 
 .weekly-forecast-container {
-	font-size: 0.8em;
+	font-size: 1.4em;
 }
 
 .day-label {
-	opacity: 0.7;
+	opacity: 0.5;
 }
 
 /*-- Quote --*/
 .quote-content {
+	font-size: 1.8em;
 	line-height: 150%;
 }
 .quote-author {
-	margin-top: -20px;
+	font-size: 1.3em;
+	margin-top: -5px;
 	font-style: italic;
 }
 
@@ -186,7 +190,7 @@ hr {
 }
 
 .marquee {
-	font-size: .8em;
+	font-size: 1.2em;
     width: 100%;
     overflow: hidden;
 }
