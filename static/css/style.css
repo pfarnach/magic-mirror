@@ -82,7 +82,7 @@ table {
 
 .lower-third {
 	position: absolute;
-	top: 86%;
+	top: 82%;
 	height: 200px;
 	margin-top: -100px;
 	line-height: 100px;	
@@ -113,9 +113,13 @@ html, body {
 	font-family: 'Quicksand';
 }
 
+hr {
+	opacity: 0.5;
+}
+
 /*-- Time --*/
 .timer-hour, .timer-min {
-	font-size: 2.4em;
+	font-size: 3.0em;
 }
 
 .time-colon {
@@ -132,15 +136,31 @@ html, body {
 }
 
 /*-- Weather --*/
+.weather-container .wi {
+	margin: 2px 4px;
+}
+
 .current-temp-container {
 	font-size: 1.8em;
 	margin-bottom: 5px;
 }
 
+.prob-rain-container {
+	font-size: 1.3em;
+}
+
 .weather-separator {
-	width: 50%;
+	width: 60%;
 	text-align: right;
 	margin-right: 0;
+}
+
+.hourly-change-container {
+	font-size: 0.8em;
+}
+
+.hourly-change-label {
+	opacity: 0.8;
 }
 
 .weekly-forecast-container {
@@ -148,7 +168,7 @@ html, body {
 }
 
 .day-label {
-	opacity: 0.8;
+	opacity: 0.7;
 }
 
 /*-- Quote --*/
@@ -161,13 +181,18 @@ html, body {
 }
 
 /*-- Ticker --*/
-.newsticker {
-	font-size: .8em;
+.marquee-divider {
+	width: 15%;
 }
 
-.tickercontainer {
-	width: 80%;
-	float: left;
+.marquee {
+	font-size: .8em;
+    width: 100%;
+    overflow: hidden;
+}
+.marquee li {
+    display: inline-block;
+    padding: 0 10px;
 }
 
 

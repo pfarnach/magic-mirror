@@ -18,7 +18,7 @@ def serve_static(path):
 
 @app.route('/get_news_headlines')
 def get_news_headlines():
-	xml_response = urllib2.urlopen('http://www.npr.org/rss/rss.php?id=1004').read()
+	xml_response = urllib2.urlopen('http://feeds.bbci.co.uk/news/rss.xml?edition=us').read()
 	xml_root = ET.fromstring(xml_response)
 	results = []
 

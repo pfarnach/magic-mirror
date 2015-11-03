@@ -58,15 +58,38 @@
 		  var dayOfWeek = new Date().getDay();
 		  var arrangedDays = (days.splice(dayOfWeek)).concat(days);
 
+		  // current weather
 			$('.current-temp').html(Math.round(weather.currently.temperature));
 			$('.current-weather-icon').addClass(weatherIcons[weather.currently.icon]);
 			$('.prob-rain').html(Math.round(weather.daily.data[0].precipProbability * 100));
+
+			console.log(weather);
+			// hourly change weather
+			for (var j = 1; j <= 12; j+=3) {
+				var time = new Date(weather.hourly.data[j].time * 1000);
+				var hour = time.getHours();
+
+				if (hour > 12) {
+					hour = hour - 12 + 'PM';
+				} else if (hour === 0) {
+					hour = 12 + 'AM';
+				} else {
+					hour += 'AM';
+				}
+
+				$('.hourly-change-container').append("<div class='hourly-change'></div>");
+				$('.hourly-change').last().append("<span class='hourly-change-label'>" + hour + " </span>");
+				$('.hourly-change').last().append("<span class='" + weatherIcons[weather.hourly.data[j].icon] + "'</span>");
+				$('.hourly-change').last().append("<span> " + Math.round(weather.hourly.data[j].temperature) + "º /</span>");
+				$('.hourly-change').last().append("<span> " + Math.round(weather.hourly.data[j].precipProbability * 100) + "%</span>");
+			}
 			
+			// daily weather
 			for (var i = 0; i < 7; i++) {
-				$('.weekly-forecast-container').append("<div class='weekly-forecast-day'></div>")
-				$('.weekly-forecast-day').last().append("<span class='day-label'>" + arrangedDays[i] + "</span>");
-				$('.weekly-forecast-day').last().append("<span class='weekday-high-temp'> " + Math.round(weather.daily.data[i].temperatureMax) + "º</span> / <span class='weekday-low-temp'>" + Math.round(weather.daily.data[i].temperatureMin) + "º </span>");
+				$('.weekly-forecast-container').append("<div class='weekly-forecast-day'></div>");
+				$('.weekly-forecast-day').last().append("<span class='day-label'>" + arrangedDays[i] + " </span>");
 				$('.weekly-forecast-day').last().append("<span class='" + weatherIcons[weather.daily.data[i].icon] +"'></span>");
+				$('.weekly-forecast-day').last().append("<span> " + Math.round(weather.daily.data[i].temperatureMax) + "º</span> / <span>" + Math.round(weather.daily.data[i].temperatureMin) + "º </span>");
 			}
 		}
 
@@ -99,8 +122,8 @@
 					author: "Mark Twain"
 				},
 				{
-					content: "In this world / love has no color / yet how deeply / my body / is stained by yours.",
-					author: "Izumi Shikibu"
+					content: "You miss 100% of the shots you don't take. -Wayne Gretzky",
+					author: "Michael Scott"
 				}
 			];
 
@@ -114,20 +137,23 @@
 		function getNews() {
 			$.get("/get_news_headlines", function (data) {
 				var headlines = data.headlines;
+				$('.marquee').hide();
 				
 				headlines.forEach(function(headline) {
-					$('.newsticker').append("<li>>>" + headline.title + "</li>");
+					$('.marquee').append("<li>" + headline.description + "</li>");
+					$('.marquee').append("<li class='wi wi-hurricane'></li>");
 				});
 
-				$('.newsticker').newsTicker({
-			    row_height: 13.5,
-			    max_rows: 2,
-			    speed: 600,
-			    direction: 'up',
-			    duration: 4000,
-			    autostart: 1,
-			    pauseOnHover: 0
-				});					
+				setTimeout(function() {
+					$('.marquee').show();
+
+					// https://jsfiddle.net/ymdahi/sj2Lcq6x/
+					$('.marquee').marquee({
+		        duration: 8000,
+		        duplicate: false
+			    });
+				}, 1000);
+				
 			});
 		}
 
