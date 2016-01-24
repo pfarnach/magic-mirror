@@ -27,7 +27,9 @@ Built using Raspberry Pi (running Raspbian Jessie), Python/Flask and a bit of sh
 
 Also this may help if you're having problems
 
-```hdmi_force_hotplug=1``` and
+```hdmi_force_hotplug=1``` 
+
+and
 
 ```hdmi_drive=2```
 
