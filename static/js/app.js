@@ -98,32 +98,38 @@
 			// TODO: Scrape this in python, add to DB and pull from Flask - http://www.forbes.com/sites/kevinkruse/2013/05/28/inspirational-quotes/
 			var quotes = [
 				{
-					content: "Strive not to be a success, but rather to be of value.",
+					content: "Strive not to be a success, but rather to be of value",
 					author: "Albert Einstein"
-				},
-				{
-					content: "The most difficult thing is the decision to act, the rest is merely tenacity.",
+				},{
+					content: "The most difficult thing is the decision to act, the rest is merely tenacity",
 					author: "Amelia Earhart"
-				},
-				{
-					content: " The best time to plant a tree was 20 years ago. The second best time is now.",
+				},{
+					content: " The best time to plant a tree was 20 years ago. The second best time is now",
 					author: "Chinese Proverb"
-				},
-				{
-					content: "Every child is an artist.  The problem is how to remain an artist once he grows up.",
+				},{
+					content: "Every child is an artist.  The problem is how to remain an artist once he grows up",
 					author: "Pablo Picasso"
-				},
-				{
-					content: "Más vale la pena en el rostro que la mancha en el corazón.",
+				},{
+					content: "Más vale la pena en el rostro que la mancha en el corazón",
 					author: "Miguel de Cervantes"
-				},
-				{
-					content: "There is nothing to writing. All you do is sit down at a typewriter and bleed.",
+				},{
+					content: "There is nothing to writing. All you do is sit down at a typewriter and bleed",
 					author: "Mark Twain"
-				},
-				{
+				},{
 					content: "You miss 100% of the shots you don't take. -Wayne Gretzky",
 					author: "Michael Scott"
+				},{
+					content: "Soy ateo gracias a Dios",
+					author: "Luis Buñuel"
+				},{
+					content: "Quisieron enterrarnos, pero no sabían que éramos semillas",
+					author: "Proverbio Mexicano"
+				},{
+					content: "There is a time when the operation of the machine becomes so odious, makes you so sick at heart, that you can't take part",
+					author: "Mario Savio"
+				},{
+					content: "Those who do not move, do not notice their chains",
+					author: "Rosa Luxemburg"
 				}
 			];
 
@@ -157,11 +163,10 @@
 			});
 		}
 
-    startTime();
+		startTime();
 		getWeather();
 		getQuote();
-		getNews();
-
+		// getNews();
 	});
 
 })();

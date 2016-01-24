@@ -82,7 +82,7 @@ table {
 
 .lower-third {
 	position: absolute;
-	top: 82%;
+	top: 85%;
 	height: 200px;
 	margin-top: -100px;
 	line-height: 100px;	
@@ -119,21 +119,21 @@ hr {
 
 /*-- Time --*/
 .timer-hour, .timer-min {
-	font-size: 5.5em;
+	font-size: 6.5em;
 }
 
 .time-colon {
-	font-size: 4.4em;
+	font-size: 6em;
 	margin-right: 5px;
 }
 
 .timer-suffix {
-	font-size: 2.5em;
+	font-size: 3.8em;
 	text-transform: uppercase;
 }
 
 .full-date {
-	font-size: 2em;
+	font-size: 3em;
 	letter-spacing: .2em;
 }
 
@@ -143,12 +143,12 @@ hr {
 }
 
 .current-temp-container {
-	font-size: 3.2em;
+	font-size: 4.5em;
 	margin-bottom: 10px;
 }
 
 .prob-rain-container {
-	font-size: 2em;
+	font-size: 2.5em;
 }
 
 .weather-separator {
@@ -175,22 +175,27 @@ hr {
 
 /*-- Quote --*/
 .quote-content {
-	font-size: 1.8em;
+	font-size: 2.2em;
 	line-height: 150%;
 }
 .quote-author {
-	font-size: 1.3em;
+	font-size: 1.5em;
 	margin-top: -5px;
 	font-style: italic;
 }
 
 /*-- Ticker --*/
-.marquee-divider {
+.marquee-divider-top {
+	width: 15%;
+	margin-bottom: 30px;
+}
+
+.marquee-divider-bottom {
 	width: 15%;
 }
 
 .marquee {
-	font-size: 1.2em;
+	font-size: 1.4em;
     width: 100%;
     overflow: hidden;
 }

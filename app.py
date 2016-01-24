@@ -1,6 +1,7 @@
 from flask import Flask, render_template, send_from_directory, jsonify
 import urllib2
 import xml.etree.ElementTree as ET
+import subprocess
 
 app = Flask(__name__, static_url_path='/static', template_folder='./')
 
@@ -30,8 +31,5 @@ def get_news_headlines():
 
 	return jsonify({'headlines': results})
 
-# To get the show on the road
 if __name__ == '__main__':
 	app.run(debug=DEBUG, port=PORT, host=HOST)
-
-# print sys.exc_info()[0]
