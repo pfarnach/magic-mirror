@@ -29,6 +29,7 @@ Also this may help if you're having problems `hdmi_force_hotplug=1` and `hdmi_dr
 
 #### Getting Chromium
 [This guy knows what's up](http://conoroneill.net/running-the-latest-chromium-45-on-debian-jessie-on-your-raspberry-pi-2/)
+
 *Note:* I didn’t expand my harddrive first and it bricked the OS on restart
 
 #### On-boot stuff happens here
@@ -57,6 +58,6 @@ Add below other stuff:
 [Source 3](https://helentronica.wordpress.com/2016/01/11/magic-mirror-with-motion-detector/)
 
 #### Screenshot
-![Screenshot](https://imgur.com/aKV1Zp6)
+![Screenshot](http://i.imgur.com/aKV1Zp6.jpg)
 
 
